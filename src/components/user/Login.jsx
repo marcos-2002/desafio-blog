@@ -1,5 +1,6 @@
 import { InputForm } from "../form/Input.style"
 import { ButtonForm } from "../form/Button.style"
+import { Link } from "react-router-dom"
 
 function Login({className}){
 
@@ -10,7 +11,7 @@ function Login({className}){
     return (
         <div className={className}>
             <h1>Login</h1>
-            <p>Novo no site? Registre-se</p>
+            <p>Novo no site? <Link to='/cadastro'>Registre-se</Link></p>
             <form>
                 <InputForm
                     type='text'

@@ -4,6 +4,7 @@ import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { LoginUser } from './components/user/Login.style'
 import { CadastroUser } from './components/user/Cadastro.style'
+import { GlobalStyle } from './GlobalStyle.jsx'
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <GlobalStyle />
     <RouterProvider router={router} />
   </React.StrictMode>,
 )

@@ -1,10 +1,15 @@
-function Navbar(){
+import { Link } from "react-router-dom"
+
+function Navbar({className}){
     return (
-        <header>
-            <h1>Tarefas</h1>
+        <header className={className}>
+            <h1><Link to='/'>Tarefas</Link></h1>
             <nav>
-                <a>Login</a>
-                <a>Cadastro</a>
+                <a>Usuario</a>
+                <a>Usuario</a>
+                <a>Usuario</a>
+                <a>Usuario</a>
+                <a>Usuario</a>
             </nav>
         </header>
     )
