@@ -5,6 +5,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { LoginUser } from './components/user/Login.style'
 import { CadastroUser } from './components/user/Cadastro.style'
 import { GlobalStyle } from './GlobalStyle.jsx'
+import { BlogStyle } from './components/pages/Blog.style.jsx'
+import UserProvider from './components/context/UserProvider.jsx'
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: '/cadastro',
         element: <CadastroUser />
+      },
+      {
+        path:'/blog',
+        element: <BlogStyle/>
       }
     ]
   }
@@ -26,6 +32,8 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <GlobalStyle />
-    <RouterProvider router={router} />
+    <UserProvider>
+      <RouterProvider router={router} />
+    </UserProvider>
   </React.StrictMode>,
 )

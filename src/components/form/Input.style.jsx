@@ -2,11 +2,10 @@ import Input from "./Input";
 import styled from "styled-components";
 
 export const InputForm = styled(Input)`
-    font-size: 1.4em;
+    font-size: 1.2em;
     padding: 10px;
 
     & label {
-        /* color: #333; */
         color: #f5af11;
         text-shadow: 0px 0px 0px rgba(0, 0, 0, .7);
     }
