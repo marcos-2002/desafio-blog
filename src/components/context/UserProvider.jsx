@@ -1,10 +1,13 @@
 import { UserContext } from "./UserContext";
 import { useState } from "react";
 
-export default UserProvider = (children) => {
-    const [user, setUser] = useState({...user, blogs:[]})
-    
+export default function UserProvider({children}) {
+
+    const [currentUser, setCurrentUser] = useState(null)
+
     return (
-        <UserContext.Provider value={{user, setUser}}>{children}</UserContext.Provider>
+        <UserContext.Provider value={{currentUser, setCurrentUser}}>
+            {children}
+        </UserContext.Provider>
     )
 }

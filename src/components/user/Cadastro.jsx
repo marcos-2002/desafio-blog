@@ -1,17 +1,33 @@
 import { InputForm } from "../form/Input.style"
 import { ButtonForm } from "../form/Button.style"
+import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 function Cadastro({className}){
 
-    function handleOnChange(){
+    const [user, setUser] = useState({adm: false})
+    const navigate = useNavigate()
 
+    function handleOnChange(e){
+        setUser({...user, [e.target.name]: e.target.value})
+    }
+
+    function submit(e){
+        e.preventDefault()
+        fetch('http://localhost:5000/users', {
+            method: "POST",
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(user)
+        })
+        .then(() => navigate('/login'))
+        .catch((err) => console.log('Erro no cadastro de usuários: ' + err))
     }
 
     return(
         <div className={className}>
             <h2>Cadastro</h2>
             <p>Insira seus dados de cadastro</p>
-            <form>
+            <form onSubmit={submit}>
                 <InputForm
                     type='text'
                     text='Insira seu e-mail'

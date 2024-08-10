@@ -9,12 +9,11 @@ export const TextAreaForm = styled(TextArea)`
         color: #f5af11;
         text-shadow: 0px 0px 0px rgba(0, 0, 0, .7);
         font-size: 1.2em;
-        margin-top: 10px;
-        margin-bottom: 10px;
     }
 
     & textArea {
         padding: 5px 10px;
+        margin-top: 15px;
     }
 
     & textArea:focus{

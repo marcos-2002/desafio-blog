@@ -6,7 +6,10 @@ import { LoginUser } from './components/user/Login.style'
 import { CadastroUser } from './components/user/Cadastro.style'
 import { GlobalStyle } from './GlobalStyle.jsx'
 import { BlogStyle } from './components/pages/Blog.style.jsx'
+import { UpdateUser } from './components/user/Cadastro.style'
+import { UsersStyle } from './components/pages/Users.style.jsx'
 import UserProvider from './components/context/UserProvider.jsx'
+
 
 const router = createBrowserRouter([
   {
@@ -24,6 +27,14 @@ const router = createBrowserRouter([
       {
         path:'/blog',
         element: <BlogStyle/>
+      },
+      {
+        path: '/update',
+        element: <UpdateUser />
+      },
+      {
+        path: '/users',
+        element: <UsersStyle />
       }
     ]
   }
