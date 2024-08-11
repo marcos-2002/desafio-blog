@@ -29,4 +29,16 @@ export const LoginUser = styled(Login)`
     a {
         color: black;
     }
+
+    @media(max-width: 670px){
+        p {
+            margin-bottom: 2px;
+        }
+    }
+
+    @media(max-width: 460px){
+        p {
+            margin-bottom: 2px;
+        }
+    }
 `

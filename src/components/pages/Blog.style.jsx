@@ -22,4 +22,15 @@ export const BlogStyle = styled(Blog)`
         margin-bottom: 20px;
         opacity: .8;
     }
+
+    @media(max-width: 750px){
+        width: 427px;
+        padding: 2px;
+        
+    }
+
+    @media(max-width: 460px){
+        width: 330px;
+        padding: 2px;
+    }
 `

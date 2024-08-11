@@ -19,4 +19,18 @@ export const TextAreaForm = styled(TextArea)`
     & textArea:focus{
         outline: 0;
     }
+
+    @media(max-width: 750px){
+        padding-left: 2px;
+        & textArea {
+            width: 400px;
+        }
+    }
+
+    @media(max-width: 460px){
+        padding-left: 2px;
+        & textArea {
+            width: 00px;
+        }
+    }
 `

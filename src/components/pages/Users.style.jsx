@@ -4,6 +4,7 @@ import Users from "./Users";
 export const UsersStyle = styled(Users)`
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     
     & div {
         border: 1px solid rgba(0, 0, 0, .2);

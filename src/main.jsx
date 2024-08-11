@@ -8,6 +8,8 @@ import { GlobalStyle } from './GlobalStyle.jsx'
 import { BlogStyle } from './components/pages/Blog.style.jsx'
 import { UpdateUser } from './components/user/Cadastro.style'
 import { UsersStyle } from './components/pages/Users.style.jsx'
+import { HomeStyle } from './components/pages/Home.style.jsx'
+
 import UserProvider from './components/context/UserProvider.jsx'
 
 
@@ -16,6 +18,10 @@ const router = createBrowserRouter([
     path: '/',
     element: <App />,
     children:[
+      {
+        path: '/',
+        element: <HomeStyle />
+      },
       {
         path: '/login',
         element: <LoginUser />
