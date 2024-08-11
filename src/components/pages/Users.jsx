@@ -23,7 +23,7 @@ function Users({className}){
         .then((res) => res.json())
         .then((data) => setBlogs(data))
         .catch((err) => console.log('Erro ao carregar blogs de usuários: ' + err))
-    }, [])
+    }, [users])
 
     function remove(id, email, blogs){
 
@@ -33,8 +33,6 @@ function Users({className}){
                     method: "DELETE",
                     headers: {'Content-Type': 'application/json'}
                 })
-                .then((res) => res.json())
-                .then((data) => console.log(data))
                 .catch((err) => console.log('Erro ao deletar dados de blog: ' + err))
             }
         })
@@ -43,8 +41,6 @@ function Users({className}){
             method: "DELETE",
             headers: {'Content-Type': 'application/json'}
         })
-        .then((res) => res.json())
-        .then((data) => console.log(data))
         .catch((err) => console.log('Erro ao deletar dados de usuários: ' + err))
     }
 
